@@ -4,12 +4,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { LoginForm } from '@/features/auth/ui/loginForm/loginForm';
 import { RegistrForm } from '@/features/auth/ui/registForm/registrForm';
+import { registerUser } from '@/services/auth/auth';
 import { Icons } from '@/shared/Icon';
 
 export const Header = () => {
   // Состояние: открыта ли форма (true) или закрыта (false)
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenRegistr, setIsOpenRegistr] = useState(false);
+
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
