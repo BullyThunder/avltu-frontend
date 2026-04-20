@@ -15,6 +15,7 @@ export const RegistrForm = ({ onClose }: registrFormProps) => {
   const [isNames, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [completeMessage, setCompleteMessage] = useState('');
+
   const [errorPasswordMessage, setErrorPasswordMessage] = useState('');
   const [isPassword, setPassword] = useState('');
   const [isConfirmPassword, setConfirmPassword] = useState('');

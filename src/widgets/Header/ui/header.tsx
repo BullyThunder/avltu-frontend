@@ -25,18 +25,21 @@ export const Header = () => {
           {/* Центральная часть: Навигация */}
           <nav className="hidden items-center gap-6 md:flex">
             <Link
+              prefetch={false}
               href="/calculate"
               className="text-sm font-medium text-slate-600 transition-colors hover:text-green-700"
             >
               Калькулятор
             </Link>
             <Link
+              prefetch={false}
               href="/tracking"
               className="text-sm font-medium text-slate-600 transition-colors hover:text-green-700"
             >
               Отследить груз
             </Link>
             <Link
+              prefetch={false}
               href="/services"
               className="text-sm font-medium text-slate-600 transition-colors hover:text-green-700"
             >
