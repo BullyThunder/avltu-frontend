@@ -16,7 +16,7 @@ export const LoginForm = ({ onClose }: loginFormProps) => {
     // e.target — это то, на что физически нажали
     // e.currentTarget — это элемент, на котором висит этот обработчик (фон)
     if (e.target === e.currentTarget) {
-      onClose(); // Закрываем только если кликнули именно по фону
+      onClose?.(); // Закрываем только если кликнули именно по фону
     }
   };
   return (

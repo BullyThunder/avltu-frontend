@@ -1,3 +1,3 @@
 export interface loginFormProps {
-  onClose(): void;
+  onClose?: () => void;
 }
