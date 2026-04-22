@@ -26,7 +26,7 @@ export default function ActivatePage() {
     }
   }, [token]);
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-gray-900 p-4">
+    <div className="bg-#D9D2C0 flex min-h-screen w-full items-center justify-center p-4">
       <div className="w-full max-w-md rounded-2xl border border-gray-700 bg-gray-800 p-8 text-center shadow-2xl">
         {/* СТАН: ЗАВАНТАЖЕННЯ */}
         {status === 'loading' && (
