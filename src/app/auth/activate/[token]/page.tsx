@@ -26,8 +26,17 @@ export default function ActivatePage() {
     }
   }, [token]);
   return (
-    <div className="bg-#D9D2C0 justify-centre items-centre flex min-h-screen w-full p-4">
-      <div className="w-full max-w-md rounded-2xl border border-gray-700 bg-gray-800 p-8 text-center shadow-2xl">
+    /* Головна обгортка */
+    <div className="flex min-h-screen w-full justify-center bg-[#D9D2C0] p-4 pt-32">
+      {/* pt-32 — робить великий відступ зверху, щоб картка була "ближче до верху", але не прилипала.
+     justify-center — центрує горизонтально.
+     items-center — ми прибрали, щоб не центрувати вертикально.
+  */}
+
+      <div className="h-fit w-full max-w-md rounded-2xl border border-gray-700 bg-gray-800 p-8 text-center shadow-2xl">
+        {/* h-fit — КРИТИЧНО ВАЖЛИВО. Змушує блок бути лише такої висоти, яка потрібна для тексту.
+         */}
+
         {/* СТАН: ЗАВАНТАЖЕННЯ */}
         {status === 'loading' && (
           <div className="flex flex-col items-center gap-4">
