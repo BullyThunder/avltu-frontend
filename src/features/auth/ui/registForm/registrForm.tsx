@@ -36,7 +36,7 @@ export const RegistrForm = ({ onClose }: registrFormProps) => {
       await registerUser(sendedData);
       console.log('Data is send');
       setCompleteMessage('Registration is complete');
-      onClose();
+      onClose?.();
     } catch (error) {
       setErrorMessage('Error registration');
       console.log(error);

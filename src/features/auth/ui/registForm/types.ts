@@ -1,3 +1,3 @@
 export interface registrFormProps {
-  onClose(): void;
+  onClose?: () => void;
 }
