@@ -46,7 +46,7 @@ export default function ActivatePage() {
             <h2 className="text-2xl font-bold text-white">Акаунт активовано!</h2>
             <p className="text-gray-400">Тепер ви можете користуватися всіма функціями сервісу</p>
             <button
-              onClick={() => router.push('/login')}
+              onClick={() => router.push('/auth/login')}
               className="mt-4 w-full rounded-xl bg-blue-600 py-3 font-bold text-white transition-all hover:bg-blue-700 active:scale-95"
             >
               Увійти в систему
