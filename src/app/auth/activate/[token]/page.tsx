@@ -27,7 +27,7 @@ export default function ActivatePage() {
   }, [token]);
   return (
     /* Головна обгортка */
-    <div className="flex min-h-screen w-full justify-center bg-[#D9D2C0] p-4 pt-32">
+    <div className="flex min-h-screen w-full justify-center p-4 pt-32">
       {/* pt-32 — робить великий відступ зверху, щоб картка була "ближче до верху", але не прилипала.
      justify-center — центрує горизонтально.
      items-center — ми прибрали, щоб не центрувати вертикально.

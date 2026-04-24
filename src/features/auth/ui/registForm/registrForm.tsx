@@ -3,6 +3,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Icons } from '@/shared/Icon';
+import { z } from 'zod';
 import { Input } from '@/shared/ui/Input';
 import { Button } from '@/shared/ui/Button';
 import { registrFormProps } from '@/features/auth/ui/registForm/types';
@@ -10,7 +11,20 @@ import { registerUser } from '@/services/auth/auth';
 
 import { useState } from 'react';
 
+const registerSchema = z
+  .object({
+    name: z.string().min(2, "Ім'я занадто коротке").trim(),
+    email: z.string().email('Некоректний формат електронної пошти'),
+    password: z.string().min(8, 'Пароль має містити не менше 8 символів'),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: 'Паролі не збігаються',
+    path: ['confirmPassword'],
+  });
+
 export const RegistrForm = ({ onClose }: registrFormProps) => {
+  /*
   const [isEmail, setEmail] = useState('');
   const [isNames, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -19,7 +33,8 @@ export const RegistrForm = ({ onClose }: registrFormProps) => {
   const [errorPasswordMessage, setErrorPasswordMessage] = useState('');
   const [isPassword, setPassword] = useState('');
   const [isConfirmPassword, setConfirmPassword] = useState('');
-
+*/
+  const { register, handleSubmit };
   const handleLoginRegistration = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setErrorMessage('');
